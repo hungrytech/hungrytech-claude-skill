@@ -1,0 +1,64 @@
+{
+  "name": "hungrytech-plugins",
+  "description": "11 Claude Code expert plugins for a complete software engineering team",
+  "owner": {
+    "name": "hungrytech"
+  },
+  "plugins": [
+    {
+      "name": "sub-team-lead",
+      "description": "Team orchestrator that classifies requests and routes to appropriate expert skills",
+      "source": "./plugins/sub-team-lead"
+    },
+    {
+      "name": "sub-kopring-engineer",
+      "description": "Kotlin/Java Spring Boot workflow agent with convention verification",
+      "source": "./plugins/sub-kopring-engineer"
+    },
+    {
+      "name": "sub-test-engineer",
+      "description": "Type-aware testing workflow agent for Java/Kotlin/TypeScript backends",
+      "source": "./plugins/sub-test-engineer"
+    },
+    {
+      "name": "sub-api-designer",
+      "description": "Contract-first API design agent with OpenAPI 3.1 spec generation and breaking change detection",
+      "source": "./plugins/sub-api-designer"
+    },
+    {
+      "name": "sub-code-reviewer",
+      "description": "Language-agnostic code review agent with SOLID analysis, code smell detection, and refactoring suggestions",
+      "source": "./plugins/sub-code-reviewer"
+    },
+    {
+      "name": "sub-devops-engineer",
+      "description": "DevOps/CI-CD agent for IaC, pipeline design, containerization, and deployment strategies",
+      "source": "./plugins/sub-devops-engineer"
+    },
+    {
+      "name": "sub-performance-engineer",
+      "description": "Performance analysis and optimization agent for JVM, DB, and system-level profiling",
+      "source": "./plugins/sub-performance-engineer"
+    },
+    {
+      "name": "engineering-workflow",
+      "description": "Micro-agent system for engineering architecture decisions across DB, BE, IF, SE domains",
+      "source": "./plugins/engineering-workflow"
+    },
+    {
+      "name": "numerical",
+      "description": "Numerical computing verification and optimization agent for Python/Dart",
+      "source": "./plugins/numerical"
+    },
+    {
+      "name": "plugin-introspector",
+      "description": "White-box monitoring and self-improvement meta-plugin for Claude Code workflow plugins",
+      "source": "./plugins/plugin-introspector"
+    },
+    {
+      "name": "claude-autopilot",
+      "description": "Time-bounded autonomous task orchestration agent",
+      "source": "./plugins/claude-autopilot"
+    }
+  ]
+}

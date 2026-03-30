@@ -58,8 +58,8 @@ Every expert works independently. There are no required dependencies between plu
 
 ```bash
 # Example: Install only code-reviewer and test-engineer
-/plugin install sub-code-reviewer@personal-plugins
-/plugin install sub-test-engineer@personal-plugins
+/plugin install sub-code-reviewer@hungrytech-plugins
+/plugin install sub-test-engineer@hungrytech-plugins
 ```
 
 `sub-team-lead` is useful when you have 3+ experts installed — it auto-routes your requests. With 1-2 experts, just call them directly.
@@ -81,21 +81,21 @@ sub-api-designer ──design──→ sub-kopring-engineer ──implement─�
 **Marketplace:**
 
 ```bash
-/plugin marketplace add brody-0125/my-claude-skills
-/plugin install <skill-name>@personal-plugins
+/plugin marketplace add hungrytech/hungrytech-claude-skill
+/plugin install <skill-name>@hungrytech-plugins
 ```
 
 **Manual (single plugin):**
 
 ```bash
-git clone https://github.com/brody-0125/my-claude-skills.git
+git clone https://github.com/hungrytech/hungrytech-claude-skill.git
 cp -r plugins/<skill-name>/skills/<skill-name> /path/to/project/.claude/skills/
 ```
 
 **Manual (multiple plugins):**
 
 ```bash
-git clone https://github.com/brody-0125/my-claude-skills.git
+git clone https://github.com/hungrytech/hungrytech-claude-skill.git
 for skill in sub-kopring-engineer sub-test-engineer sub-code-reviewer; do
   cp -r plugins/$skill/skills/$skill /path/to/project/.claude/skills/
 done
@@ -514,8 +514,8 @@ sub-team-lead (분류 & 라우팅)
 
 ```bash
 # 예시: code-reviewer와 test-engineer만 설치
-/plugin install sub-code-reviewer@personal-plugins
-/plugin install sub-test-engineer@personal-plugins
+/plugin install sub-code-reviewer@hungrytech-plugins
+/plugin install sub-test-engineer@hungrytech-plugins
 ```
 
 `sub-team-lead`는 전문가 3명 이상 설치 시 유용합니다 — 요청을 자동 라우팅합니다. 1-2명이면 직접 호출하는 게 빠릅니다.
@@ -544,14 +544,14 @@ sub-api-designer ──설계──→ sub-kopring-engineer ──구현──�
 **수동 설치 (단일 플러그인):**
 
 ```bash
-git clone https://github.com/brody-0125/my-claude-skills.git
+git clone https://github.com/hungrytech/hungrytech-claude-skill.git
 cp -r plugins/<skill-name>/skills/<skill-name> /path/to/project/.claude/skills/
 ```
 
 **수동 설치 (여러 플러그인):**
 
 ```bash
-git clone https://github.com/brody-0125/my-claude-skills.git
+git clone https://github.com/hungrytech/hungrytech-claude-skill.git
 for skill in sub-kopring-engineer sub-test-engineer sub-code-reviewer; do
   cp -r plugins/$skill/skills/$skill /path/to/project/.claude/skills/
 done
