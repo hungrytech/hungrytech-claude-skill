@@ -537,8 +537,8 @@ sub-api-designer ──설계──→ sub-kopring-engineer ──구현──�
 **마켓플레이스:**
 
 ```bash
-/plugin marketplace add brody-0125/my-claude-skills
-/plugin install <skill-name>@personal-plugins
+/plugin marketplace add hungrytech/hungrytech-claude-skill
+/plugin install <skill-name>@hungrytech-plugins
 ```
 
 **수동 설치 (단일 플러그인):**
