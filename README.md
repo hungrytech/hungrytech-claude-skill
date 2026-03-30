@@ -468,24 +468,6 @@ plugins/numerical/skills/numerical/scripts/verify-numeric.sh [path]
 
 ---
 
-## Project Stats
-
-| Plugin | Files | Role |
-|--------|------:|------|
-| sub-team-lead | 10 | Team orchestration |
-| sub-kopring-engineer | 68 | Backend development |
-| sub-test-engineer | 92 | Test generation |
-| sub-api-designer | 13 | API design |
-| sub-code-reviewer | 13 | Code review |
-| sub-devops-engineer | 16 | DevOps/CI-CD |
-| sub-performance-engineer | 14 | Performance |
-| engineering-workflow | 144 | Architecture decisions |
-| numerical | 21 | Numerical computing |
-| plugin-introspector | 48 | Meta-monitoring |
-| claude-autopilot | 20 | Autonomous execution |
-| sub-frontend-engineer | 16 | Frontend development |
-| **Total** | **475** | **12 experts** |
-
 ## License
 
 MIT
@@ -973,24 +955,6 @@ plugins/numerical/skills/numerical/scripts/verify-numeric.sh [경로]
 ```
 
 ---
-
-## 프로젝트 통계
-
-| 플러그인 | 파일 수 | 역할 |
-|----------|--------:|------|
-| sub-team-lead | 10 | 팀 오케스트레이션 |
-| sub-kopring-engineer | 68 | 백엔드 개발 |
-| sub-test-engineer | 92 | 테스트 생성 |
-| sub-api-designer | 13 | API 설계 |
-| sub-code-reviewer | 13 | 코드 리뷰 |
-| sub-devops-engineer | 16 | DevOps/CI-CD |
-| sub-performance-engineer | 14 | 성능 분석 |
-| engineering-workflow | 144 | 아키텍처 의사결정 |
-| numerical | 21 | 수치 연산 |
-| plugin-introspector | 48 | 메타 모니터링 |
-| claude-autopilot | 20 | 자율 실행 |
-| sub-frontend-engineer | 16 | 프론트엔드 개발 |
-| **합계** | **475** | **12명의 전문가** |
 
 ## 라이선스
 
