@@ -1,0 +1,14 @@
+{
+  "type": "https://api.example.com/errors/{ERROR_TYPE}",
+  "title": "{ERROR_TITLE}",
+  "status": "{HTTP_STATUS_CODE}",
+  "detail": "{ERROR_DETAIL_MESSAGE}",
+  "instance": "{REQUEST_PATH}",
+  "errors": [
+    {
+      "field": "{FIELD_NAME}",
+      "message": "{VALIDATION_MESSAGE}",
+      "code": "{ERROR_CODE}"
+    }
+  ]
+}

@@ -1,0 +1,29 @@
+{
+  "name": "sub-team-lead",
+  "description": "Team orchestrator that classifies requests and routes to appropriate expert skills",
+  "version": "1.0.0",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Task",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[TeamLead] Expert dispatch logged' || true"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[TeamLead] Session complete — review dispatch summary' || true"
+          }
+        ]
+      }
+    ]
+  }
+}

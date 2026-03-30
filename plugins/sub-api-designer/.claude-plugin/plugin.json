@@ -1,0 +1,29 @@
+{
+  "name": "sub-api-designer",
+  "description": "Contract-first API design agent with OpenAPI 3.1 spec generation and breaking change detection",
+  "version": "1.0.0",
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // .path // empty' 2>/dev/null); if [ -n \"$file\" ] && echo \"$file\" | grep -qiE '(openapi-prod|api-spec-prod|swagger-prod)'; then echo '{\"decision\":\"block\",\"reason\":\"Production API spec file edit blocked\"}'; exit 2; fi"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // .path // empty' 2>/dev/null); if [ -n \"$file\" ] && echo \"$file\" | grep -qE '\\.(yaml|yml)$'; then echo \"[APIDesigner] YAML written: $file\"; fi || true"
+          }
+        ]
+      }
+    ]
+  }
+}

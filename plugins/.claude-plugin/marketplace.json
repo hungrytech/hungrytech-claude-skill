@@ -29,6 +29,31 @@
       "name": "engineering-workflow",
       "description": "Micro-agent system for engineering architecture decisions across DB, BE, IF, SE domains",
       "source": "./engineering-workflow"
+    },
+    {
+      "name": "sub-team-lead",
+      "description": "Team orchestrator that classifies requests and routes to appropriate expert skills",
+      "source": "./sub-team-lead"
+    },
+    {
+      "name": "sub-api-designer",
+      "description": "Contract-first API design agent with OpenAPI 3.1 spec generation and breaking change detection",
+      "source": "./sub-api-designer"
+    },
+    {
+      "name": "sub-code-reviewer",
+      "description": "Language-agnostic code review agent with SOLID analysis, code smell detection, and refactoring suggestions",
+      "source": "./sub-code-reviewer"
+    },
+    {
+      "name": "sub-devops-engineer",
+      "description": "DevOps/CI-CD agent for IaC, pipeline design, containerization, and deployment strategies",
+      "source": "./sub-devops-engineer"
+    },
+    {
+      "name": "sub-performance-engineer",
+      "description": "Performance analysis and optimization agent for JVM, DB, and system-level profiling",
+      "source": "./sub-performance-engineer"
     }
   ]
 }
