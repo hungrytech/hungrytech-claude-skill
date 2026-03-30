@@ -1,4 +1,4 @@
-# hungrytech-claude-skill
+# hungrytech-claude-skills
 
 A curated collection of **12 Claude Code plugins** that form a complete software engineering team. Each plugin is a specialized expert agent — no runtime build system, just shell scripts and SKILL.md prompts.
 
@@ -86,21 +86,21 @@ sub-api-designer ──spec──→ sub-frontend-engineer ──UI──→ sub
 **Marketplace:**
 
 ```bash
-/plugin marketplace add hungrytech/hungrytech-claude-skill
+/plugin marketplace add hungrytech/hungrytech-claude-skills
 /plugin install <skill-name>@hungrytech-plugins
 ```
 
 **Manual (single plugin):**
 
 ```bash
-git clone https://github.com/hungrytech/hungrytech-claude-skill.git
+git clone https://github.com/hungrytech/hungrytech-claude-skills.git
 cp -r plugins/<skill-name>/skills/<skill-name> /path/to/project/.claude/skills/
 ```
 
 **Manual (multiple plugins):**
 
 ```bash
-git clone https://github.com/hungrytech/hungrytech-claude-skill.git
+git clone https://github.com/hungrytech/hungrytech-claude-skills.git
 for skill in sub-kopring-engineer sub-test-engineer sub-code-reviewer; do
   cp -r plugins/$skill/skills/$skill /path/to/project/.claude/skills/
 done
@@ -496,7 +496,7 @@ MIT
 
 <a id="한국어"></a>
 
-# hungrytech-claude-skill (한국어)
+# hungrytech-claude-skills (한국어)
 
 **12개의 Claude Code 플러그인**으로 구성된 완전한 소프트웨어 엔지니어링 팀. 각 플러그인은 전문 영역의 에이전트로, 런타임 빌드 시스템 없이 셸 스크립트와 SKILL.md 프롬프트만으로 동작합니다.
 
@@ -582,21 +582,21 @@ sub-api-designer ──스펙──→ sub-frontend-engineer ──UI──→ s
 **마켓플레이스:**
 
 ```bash
-/plugin marketplace add hungrytech/hungrytech-claude-skill
+/plugin marketplace add hungrytech/hungrytech-claude-skills
 /plugin install <skill-name>@hungrytech-plugins
 ```
 
 **수동 설치 (단일 플러그인):**
 
 ```bash
-git clone https://github.com/hungrytech/hungrytech-claude-skill.git
+git clone https://github.com/hungrytech/hungrytech-claude-skills.git
 cp -r plugins/<skill-name>/skills/<skill-name> /path/to/project/.claude/skills/
 ```
 
 **수동 설치 (여러 플러그인):**
 
 ```bash
-git clone https://github.com/hungrytech/hungrytech-claude-skill.git
+git clone https://github.com/hungrytech/hungrytech-claude-skills.git
 for skill in sub-kopring-engineer sub-test-engineer sub-code-reviewer; do
   cp -r plugins/$skill/skills/$skill /path/to/project/.claude/skills/
 done
