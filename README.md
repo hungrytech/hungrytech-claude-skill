@@ -40,7 +40,7 @@ sub-team-lead (classify & route)
 
 ## Pick Your Team
 
-You don't need all 11 experts. Install only the ones that match your workflow.
+You don't need all 12 experts. Install only the ones that match your workflow.
 
 ### Presets by Role
 
@@ -536,7 +536,7 @@ sub-team-lead (분류 & 라우팅)
 
 ## 필요한 전문가만 골라 쓰기
 
-11명 전부 설치할 필요 없습니다. 자신의 워크플로우에 맞는 전문가만 골라 설치하세요.
+12명 전부 설치할 필요 없습니다. 자신의 워크플로우에 맞는 전문가만 골라 설치하세요.
 
 ### 역할별 추천 조합
 
