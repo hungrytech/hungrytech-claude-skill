@@ -1,6 +1,6 @@
 # 전문가 카탈로그
 
-> 11명의 전문가 전체 목록과 역할, 활성화 키워드, 강점.
+> 12명의 전문가 전체 목록과 역할, 활성화 키워드, 강점.
 
 ---
 
@@ -39,6 +39,12 @@
 - **역할**: 플러그인 모니터링 및 자기 개선 메타 플러그인
 - **키워드**: introspect, plugin status, self-improve
 - **강점**: 플러그인 상태 대시보드, 품질 게이트 규칙
+
+### sub-frontend-engineer
+- **역할**: React/Vite/TypeScript 프론트엔드 개발 (컴포넌트, 상태 관리, 빌드 최적화)
+- **키워드**: react, vite, frontend, 프론트엔드, component, 컴포넌트, tailwind, zustand, tanstack, vitest, 프론트, UI, 페이지, 화면
+- **강점**: 컴포넌트 설계, Zustand/TanStack Query 상태 관리, Tailwind 스타일링, Vite 빌드 최적화
+- **워크플로우**: Discover → Design → Implement → Verify
 
 ## 신규 전문가 (5명)
 

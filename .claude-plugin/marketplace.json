@@ -1,6 +1,6 @@
 {
   "name": "hungrytech-plugins",
-  "description": "11 Claude Code expert plugins for a complete software engineering team",
+  "description": "12 Claude Code expert plugins for a complete software engineering team",
   "owner": {
     "name": "hungrytech"
   },
@@ -59,6 +59,11 @@
       "name": "claude-autopilot",
       "description": "Time-bounded autonomous task orchestration agent",
       "source": "./plugins/claude-autopilot"
+    },
+    {
+      "name": "sub-frontend-engineer",
+      "description": "React/Vite frontend workflow agent with component design, state management, and build optimization",
+      "source": "./plugins/sub-frontend-engineer"
     }
   ]
 }

@@ -54,6 +54,11 @@
       "name": "sub-performance-engineer",
       "description": "Performance analysis and optimization agent for JVM, DB, and system-level profiling",
       "source": "./sub-performance-engineer"
+    },
+    {
+      "name": "sub-frontend-engineer",
+      "description": "React/Vite frontend workflow agent with component design, state management, and build optimization",
+      "source": "./sub-frontend-engineer"
     }
   ]
 }

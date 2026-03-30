@@ -1,6 +1,6 @@
-# My Claude Skills
+# hungrytech-claude-skill
 
-A curated collection of **11 Claude Code plugins** that form a complete software engineering team. Each plugin is a specialized expert agent — no runtime build system, just shell scripts and SKILL.md prompts.
+A curated collection of **12 Claude Code plugins** that form a complete software engineering team. Each plugin is a specialized expert agent — no runtime build system, just shell scripts and SKILL.md prompts.
 
 > **[한국어 버전은 아래에 있습니다 →](#한국어)**
 
@@ -34,6 +34,7 @@ sub-team-lead (classify & route)
 | 9 | [numerical](#numerical) | `/numerical` | Numerical computing verification (Python/Dart) |
 | 10 | [plugin-introspector](#plugin-introspector) | `/plugin-introspector` | Plugin monitoring & self-improvement |
 | 11 | [claude-autopilot](#claude-autopilot) | `/claude-autopilot` | Time-bounded autonomous task orchestration |
+| 12 | [sub-frontend-engineer](#sub-frontend-engineer) | `/sub-frontend-engineer` | React/Vite frontend development (components, state, build) |
 
 ---
 
@@ -47,10 +48,10 @@ You don't need all 11 experts. Install only the ones that match your workflow.
 |---------------|--------------------:|---------|
 | **Backend developer (Kotlin/Java)** | kopring + test + code-reviewer | 3 plugins |
 | **Backend + API design** | kopring + test + api-designer + code-reviewer | 4 plugins |
-| **Full-stack team** | team-lead + kopring + test + api-designer + code-reviewer + devops | 6 plugins |
+| **Full-stack team** | team-lead + kopring + test + api-designer + code-reviewer + devops + frontend | 7 plugins |
 | **Performance-focused** | kopring + test + performance | 3 plugins |
 | **Architecture/decision-making** | engineering-workflow + code-reviewer | 2 plugins |
-| **Everything** | All 11 | 11 plugins |
+| **Everything** | All 12 | 12 plugins |
 
 ### Standalone Experts (no dependencies)
 
@@ -72,6 +73,10 @@ When multiple experts are installed, they can hand off work to each other. This 
 sub-api-designer ──design──→ sub-kopring-engineer ──implement──→ sub-test-engineer
        │                                                              │
        └── works fine alone                              works fine alone
+
+sub-api-designer ──spec──→ sub-frontend-engineer ──UI──→ sub-devops-engineer
+       │                          │                           │
+       └── works fine alone       └── works fine alone        └── works fine alone
 ```
 
 ---
@@ -394,6 +399,37 @@ Accepts a directive and deadline, then autonomously decomposes tasks, executes t
 
 ---
 
+### sub-frontend-engineer
+
+React/Vite/TypeScript frontend development agent.
+
+**Workflow**: Discover → Design → Implement → Verify
+
+```bash
+/sub-frontend-engineer
+로그인 페이지 만들어줘
+```
+
+| Mode | Example | Behavior |
+|------|---------|----------|
+| Full cycle | `로그인 페이지 만들어줘` | Discover → Design → Implement → Verify |
+| Component | `component: UserCard` | Single component generation |
+| Page | `page: /dashboard` | Page-level generation with routing |
+| Hook | `hook: useAuth` | Custom hook generation |
+| Style | `style: 다크 모드 추가` | Tailwind theme/style config |
+
+**Tech stack**: React 18+, Vite, TypeScript, Tailwind CSS, React Router, Zustand, TanStack Query.
+
+**Testing**: Vitest + React Testing Library (unit/integration), Playwright (E2E).
+
+**Scripts**: `detect-frontend-stack.sh` (stack detection), `measure-bundle-size.sh` (bundle analysis)
+
+**Sister-skill integration**: → `sub-api-designer` (API client hooks) → `sub-test-engineer` (test strategy) → `sub-code-reviewer` (code review) → `sub-devops-engineer` (build + deploy)
+
+**Keywords**: "react", "vite", "frontend", "프론트엔드", "component", "컴포넌트", "tailwind", "zustand", "tanstack", "vitest", "프론트", "UI", "페이지", "화면"
+
+---
+
 ## Validation Commands
 
 All scripts run without a build system — bash + jq only:
@@ -420,6 +456,9 @@ plugins/sub-devops-engineer/skills/sub-devops-engineer/scripts/detect-infra.sh [
 # Performance: Slow query analysis
 plugins/sub-performance-engineer/skills/sub-performance-engineer/scripts/analyze-slow-query.sh [path]
 
+# Frontend: Stack detection
+plugins/sub-frontend-engineer/skills/sub-frontend-engineer/scripts/detect-frontend-stack.sh [path]
+
 # Engineering Workflow: Query classification
 plugins/engineering-workflow/skills/engineering-workflow/scripts/classify-query.sh "query"
 
@@ -444,7 +483,8 @@ plugins/numerical/skills/numerical/scripts/verify-numeric.sh [path]
 | numerical | 21 | Numerical computing |
 | plugin-introspector | 48 | Meta-monitoring |
 | claude-autopilot | 20 | Autonomous execution |
-| **Total** | **459** | **11 experts** |
+| sub-frontend-engineer | 16 | Frontend development |
+| **Total** | **475** | **12 experts** |
 
 ## License
 
@@ -456,9 +496,9 @@ MIT
 
 <a id="한국어"></a>
 
-# My Claude Skills (한국어)
+# hungrytech-claude-skill (한국어)
 
-**11개의 Claude Code 플러그인**으로 구성된 완전한 소프트웨어 엔지니어링 팀. 각 플러그인은 전문 영역의 에이전트로, 런타임 빌드 시스템 없이 셸 스크립트와 SKILL.md 프롬프트만으로 동작합니다.
+**12개의 Claude Code 플러그인**으로 구성된 완전한 소프트웨어 엔지니어링 팀. 각 플러그인은 전문 영역의 에이전트로, 런타임 빌드 시스템 없이 셸 스크립트와 SKILL.md 프롬프트만으로 동작합니다.
 
 ---
 
@@ -490,6 +530,7 @@ sub-team-lead (분류 & 라우팅)
 | 9 | [numerical](#numerical-1) | `/numerical` | 수치 연산 검증/최적화 (Python/Dart) |
 | 10 | [plugin-introspector](#plugin-introspector-1) | `/plugin-introspector` | 플러그인 모니터링/자기 개선 |
 | 11 | [claude-autopilot](#claude-autopilot-1) | `/claude-autopilot` | 시간 제한 자율 실행 오케스트레이터 |
+| 12 | [sub-frontend-engineer](#sub-frontend-engineer-1) | `/sub-frontend-engineer` | React/Vite 프론트엔드 (컴포넌트, 상태 관리, 빌드 최적화) |
 
 ---
 
@@ -503,10 +544,10 @@ sub-team-lead (분류 & 라우팅)
 |-----------|-----------:|--------:|
 | **백엔드 개발자 (Kotlin/Java)** | kopring + test + code-reviewer | 3개 |
 | **백엔드 + API 설계** | kopring + test + api-designer + code-reviewer | 4개 |
-| **풀스택 팀** | team-lead + kopring + test + api-designer + code-reviewer + devops | 6개 |
+| **풀스택 팀** | team-lead + kopring + test + api-designer + code-reviewer + devops + frontend | 7개 |
 | **성능 중심** | kopring + test + performance | 3개 |
 | **아키텍처/의사결정** | engineering-workflow + code-reviewer | 2개 |
-| **전부 다** | 전체 11개 | 11개 |
+| **전부 다** | 전체 12개 | 12개 |
 
 ### 단독 사용 가능
 
@@ -528,6 +569,10 @@ sub-team-lead (분류 & 라우팅)
 sub-api-designer ──설계──→ sub-kopring-engineer ──구현──→ sub-test-engineer
        │                                                        │
        └── 단독으로도 OK                              단독으로도 OK
+
+sub-api-designer ──스펙──→ sub-frontend-engineer ──UI──→ sub-devops-engineer
+       │                          │                           │
+       └── 단독으로도 OK           └── 단독으로도 OK            └── 단독으로도 OK
 ```
 
 ---
@@ -859,6 +904,38 @@ API 엔드포인트 리팩토링하고 테스트 추가해줘. --until 15:30
 
 ---
 
+<a id="sub-frontend-engineer-1"></a>
+### sub-frontend-engineer — React/Vite 프론트엔드 전문가
+
+React + Vite + TypeScript 기반 프론트엔드 프로젝트의 컴포넌트 설계, 상태 관리, 스타일링, 빌드 최적화를 수행합니다.
+
+**워크플로우**: Discover → Design → Implement → Verify
+
+```bash
+/sub-frontend-engineer
+로그인 페이지 만들어줘
+```
+
+| 모드 | 예시 | 동작 |
+|------|------|------|
+| 전체 사이클 | `로그인 페이지 만들어줘` | Discover → Design → Implement → Verify |
+| 컴포넌트 | `component: UserCard` | 단일 컴포넌트 생성 |
+| 페이지 | `page: /dashboard` | 페이지 단위 생성 (라우팅 포함) |
+| 훅 | `hook: useAuth` | 커스텀 훅 생성 |
+| 스타일 | `style: 다크 모드 추가` | Tailwind 테마/스타일 설정 |
+
+**기술 스택**: React 18+, Vite, TypeScript, Tailwind CSS, React Router, Zustand, TanStack Query.
+
+**테스트**: Vitest + React Testing Library (단위/통합), Playwright (E2E).
+
+**스크립트**: `detect-frontend-stack.sh` (스택 감지), `measure-bundle-size.sh` (번들 분석)
+
+**자매 스킬 연동**: → `sub-api-designer` (API 클라이언트/훅 생성) → `sub-test-engineer` (테스트 전략 위임) → `sub-code-reviewer` (코드 리뷰) → `sub-devops-engineer` (Vite 빌드 + Docker + CI/CD)
+
+**활성화 키워드**: "react", "vite", "frontend", "프론트엔드", "component", "컴포넌트", "tailwind", "zustand", "tanstack", "vitest", "프론트", "UI", "페이지", "화면"
+
+---
+
 ## 검증 명령어
 
 모든 스크립트는 빌드 시스템 없이 실행 — bash + jq만 필요:
@@ -885,6 +962,9 @@ plugins/sub-devops-engineer/skills/sub-devops-engineer/scripts/detect-infra.sh [
 # 성능 엔지니어: 슬로우 쿼리 분석
 plugins/sub-performance-engineer/skills/sub-performance-engineer/scripts/analyze-slow-query.sh [경로]
 
+# 프론트엔드: 스택 감지
+plugins/sub-frontend-engineer/skills/sub-frontend-engineer/scripts/detect-frontend-stack.sh [경로]
+
 # 엔지니어링 워크플로우: 쿼리 분류
 plugins/engineering-workflow/skills/engineering-workflow/scripts/classify-query.sh "쿼리"
 
@@ -909,7 +989,8 @@ plugins/numerical/skills/numerical/scripts/verify-numeric.sh [경로]
 | numerical | 21 | 수치 연산 |
 | plugin-introspector | 48 | 메타 모니터링 |
 | claude-autopilot | 20 | 자율 실행 |
-| **합계** | **459** | **11명의 전문가** |
+| sub-frontend-engineer | 16 | 프론트엔드 개발 |
+| **합계** | **475** | **12명의 전문가** |
 
 ## 라이선스
 

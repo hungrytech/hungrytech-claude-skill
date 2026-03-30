@@ -39,6 +39,7 @@ match_expert() {
   fi
 }
 
+match_expert "sub-frontend-engineer"     "react|vite|frontend|프론트엔드|component|컴포넌트|tailwind|zustand|tanstack|vitest|프론트|ui |페이지|화면"
 match_expert "sub-kopring-engineer"      "kotlin|java|spring|hexagonal|jpa|jooq|gradle|controller|repository|entity|kopring"
 match_expert "sub-test-engineer"         "test|coverage|mutation|property-test|junit|kotest|jest|테스트|커버리지"
 match_expert "sub-api-designer"          "api design|openapi|rest api|swagger|endpoint|api 설계|api 문서|breaking change|contract"
