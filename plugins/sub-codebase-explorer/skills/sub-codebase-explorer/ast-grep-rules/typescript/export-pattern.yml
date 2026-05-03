@@ -1,0 +1,6 @@
+id: ts-export
+language: typescript
+severity: info
+message: "TypeScript export statement"
+rule:
+  kind: export_statement

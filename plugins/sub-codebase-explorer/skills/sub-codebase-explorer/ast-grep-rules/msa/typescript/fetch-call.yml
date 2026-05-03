@@ -1,0 +1,9 @@
+id: msa-fetch-call
+language: typescript
+severity: info
+message: "fetch() HTTP call"
+rule:
+  kind: call_expression
+  has:
+    kind: identifier
+    regex: '^fetch$'

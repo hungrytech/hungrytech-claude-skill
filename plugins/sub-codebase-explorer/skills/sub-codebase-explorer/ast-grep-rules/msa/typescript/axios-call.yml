@@ -1,0 +1,15 @@
+id: msa-axios-call
+language: typescript
+severity: info
+message: "axios HTTP call"
+rule:
+  kind: call_expression
+  has:
+    kind: member_expression
+    all:
+      - has:
+          kind: identifier
+          regex: '^axios$'
+      - has:
+          kind: property_identifier
+          regex: '^(get|post|put|delete|patch|head|options|request)$'

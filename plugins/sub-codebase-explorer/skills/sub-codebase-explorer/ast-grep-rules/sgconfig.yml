@@ -1,0 +1,12 @@
+ruleDirs:
+  - kotlin-java/annotations
+  - kotlin-java/structure
+  - kotlin-java/style
+  - kotlin-java/custom
+  - python
+  - typescript
+  - go
+  - msa/kotlin-java
+  - msa/typescript
+  - msa/python
+  - msa/go

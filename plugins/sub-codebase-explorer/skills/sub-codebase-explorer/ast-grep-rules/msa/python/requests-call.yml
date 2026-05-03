@@ -1,0 +1,15 @@
+id: msa-requests-call
+language: python
+severity: info
+message: "requests HTTP call"
+rule:
+  kind: call
+  has:
+    kind: attribute
+    all:
+      - has:
+          kind: identifier
+          regex: '^(requests|httpx)$'
+      - has:
+          kind: identifier
+          regex: '^(get|post|put|delete|patch|head|options|request)$'

@@ -1,0 +1,6 @@
+id: go-import
+language: go
+severity: info
+message: "Go import declaration"
+rule:
+  kind: import_declaration

@@ -46,7 +46,7 @@
 - **강점**: 컴포넌트 설계, Zustand/TanStack Query 상태 관리, Tailwind 스타일링, Vite 빌드 최적화
 - **워크플로우**: Discover → Design → Implement → Verify
 
-## 신규 전문가 (5명)
+## 신규 전문가 (6명)
 
 ### sub-team-lead (self)
 - **역할**: 팀 오케스트레이션, 요청 분류 및 라우팅
@@ -72,3 +72,11 @@
 - **역할**: 성능 분석/최적화 (JVM, DB, 시스템)
 - **키워드**: performance, latency, gc, load test, slow query, cache
 - **강점**: JVM 프로파일링, DB 쿼리 분석, 부하 테스트 설계
+
+### sub-codebase-explorer
+- **역할**: 다언어 코드베이스 구조 발견·시각화·MSA 토폴로지 매핑·온보딩 문서 자동 생성
+- **키워드**: explore, codebase, legacy, dependency graph, hotspot, deadcode, onboarding, msa, microservice, event flow, sequence diagram, 코드베이스, 레거시, 온보딩, 의존성 그래프, 아키텍처 분석, 마이크로서비스
+- **강점**: 폴리글랏 모노레포 인벤토리, 순환 의존성 탐지, Git hotspot, 도메인 모델 추출, **서비스 간 API 호출/이벤트 발행 개별 md 자동 생성** (Mermaid 시퀀스/플로우차트)
+- **워크플로우**: Discover → Map(+MSA) → Diagnose → Document(+msa/ 디렉토리)
+- **연계**: → sub-code-reviewer (hotspot 파일 심층 리뷰) / sub-kopring-engineer (Kotlin 모듈 구현) / sub-api-designer (감지된 API 호출 → OpenAPI 컨트랙트화)
+- **호출 경로**: 직접 (`/sub-codebase-explorer`) + team-lead 라우팅 모두 1급 지원

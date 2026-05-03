@@ -1,0 +1,6 @@
+id: ts-class
+language: typescript
+severity: info
+message: "TypeScript class declaration"
+rule:
+  kind: class_declaration

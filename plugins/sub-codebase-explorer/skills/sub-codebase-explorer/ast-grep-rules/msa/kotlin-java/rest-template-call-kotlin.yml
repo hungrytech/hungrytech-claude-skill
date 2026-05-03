@@ -1,0 +1,11 @@
+id: msa-resttemplate-call-kotlin
+language: kotlin
+severity: info
+message: "RestTemplate HTTP call"
+rule:
+  kind: call_expression
+  has:
+    kind: navigation_expression
+    has:
+      kind: simple_identifier
+      regex: '^(getForObject|getForEntity|postForObject|postForEntity|exchange|put|delete)$'

@@ -1,0 +1,6 @@
+id: ts-import
+language: typescript
+severity: info
+message: "TypeScript import statement"
+rule:
+  kind: import_statement

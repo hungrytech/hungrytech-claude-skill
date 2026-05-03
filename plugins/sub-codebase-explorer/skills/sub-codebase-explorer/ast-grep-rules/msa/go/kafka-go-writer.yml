@@ -1,0 +1,15 @@
+id: msa-kafka-go-writer
+language: go
+severity: info
+message: "kafka-go Writer (event publisher)"
+rule:
+  kind: call_expression
+  has:
+    kind: selector_expression
+    all:
+      - has:
+          kind: identifier
+          regex: '^kafka$'
+      - has:
+          kind: field_identifier
+          regex: '^(NewWriter|Writer)$'

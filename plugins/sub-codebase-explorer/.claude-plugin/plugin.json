@@ -1,0 +1,29 @@
+{
+  "name": "sub-codebase-explorer",
+  "description": "다언어 코드베이스 구조 발견·시각화·MSA 토폴로지 매핑·온보딩 문서 자동 생성 전문가",
+  "version": "1.0.0",
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "file=$(echo \"$CLAUDE_TOOL_INPUT\" | jq -r '.file_path // empty' 2>/dev/null); if echo \"$file\" | grep -qE '(ARCHITECTURE|ONBOARDING)\\.md$|\\.dot$|\\.mmd$|/msa/'; then echo \"[CodebaseExplorer] 산출물 작성: $file\"; fi || true"
+          }
+        ]
+      }
+    ],
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "echo '[CodebaseExplorer] 세션 종료 — ~/.claude/cache/sub-codebase-explorer-* 캐시 보존' || true"
+          }
+        ]
+      }
+    ]
+  }
+}

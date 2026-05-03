@@ -1,0 +1,9 @@
+id: msa-kafka-consumer-py
+language: python
+severity: info
+message: "KafkaConsumer instantiation (event subscriber)"
+rule:
+  kind: call
+  has:
+    kind: identifier
+    regex: '^KafkaConsumer$'

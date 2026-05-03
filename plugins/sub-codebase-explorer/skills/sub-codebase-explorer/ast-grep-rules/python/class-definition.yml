@@ -1,0 +1,6 @@
+id: python-class-definition
+language: python
+severity: info
+message: "Python class definition"
+rule:
+  kind: class_definition

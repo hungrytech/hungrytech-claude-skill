@@ -1,0 +1,17 @@
+// Auto-generated dependency graph — Graphviz DOT format
+// Render: dot -Tsvg dependency-graph.dot > dependency-graph.svg
+
+digraph dependencies {
+  rankdir=LR;
+  node [shape=box, style=rounded, fontname="Helvetica"];
+  edge [fontname="Helvetica", fontsize=10];
+
+  // Nodes
+{{NODE_DECLARATIONS}}
+
+  // Edges (label = import line count)
+{{EDGE_DECLARATIONS}}
+
+  // Circular dependency highlight
+{{CYCLE_HIGHLIGHTS}}
+}

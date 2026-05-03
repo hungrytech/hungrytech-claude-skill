@@ -1,0 +1,6 @@
+id: go-method
+language: go
+severity: info
+message: "Go method declaration (receiver function)"
+rule:
+  kind: method_declaration

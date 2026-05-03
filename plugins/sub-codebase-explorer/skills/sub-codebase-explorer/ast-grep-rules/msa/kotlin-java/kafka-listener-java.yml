@@ -1,0 +1,9 @@
+id: msa-kafka-listener-java
+language: java
+severity: info
+message: "@KafkaListener method (event subscriber)"
+rule:
+  kind: annotation
+  has:
+    kind: identifier
+    regex: '^KafkaListener$'

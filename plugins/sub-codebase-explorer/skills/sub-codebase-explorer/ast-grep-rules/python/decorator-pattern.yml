@@ -1,0 +1,6 @@
+id: python-decorator
+language: python
+severity: info
+message: "Python decorator usage"
+rule:
+  kind: decorator

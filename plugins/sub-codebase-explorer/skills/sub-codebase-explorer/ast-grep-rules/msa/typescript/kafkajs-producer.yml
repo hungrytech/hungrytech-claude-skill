@@ -1,0 +1,15 @@
+id: msa-kafkajs-producer
+language: typescript
+severity: info
+message: "kafkajs producer.send (event publisher)"
+rule:
+  kind: call_expression
+  has:
+    kind: member_expression
+    all:
+      - has:
+          kind: identifier
+          regex: '^producer$'
+      - has:
+          kind: property_identifier
+          regex: '^send$'

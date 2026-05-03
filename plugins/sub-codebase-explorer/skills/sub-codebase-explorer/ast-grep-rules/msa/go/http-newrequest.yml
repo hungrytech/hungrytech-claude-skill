@@ -1,0 +1,15 @@
+id: msa-go-http-newrequest
+language: go
+severity: info
+message: "http.NewRequest HTTP call"
+rule:
+  kind: call_expression
+  has:
+    kind: selector_expression
+    all:
+      - has:
+          kind: identifier
+          regex: '^http$'
+      - has:
+          kind: field_identifier
+          regex: '^(NewRequest|NewRequestWithContext|Get|Post|PostForm|Head)$'

@@ -1,0 +1,9 @@
+id: msa-feign-client-java
+language: java
+severity: info
+message: "@FeignClient declaration"
+rule:
+  kind: marker_annotation
+  has:
+    kind: identifier
+    regex: '^FeignClient$'
