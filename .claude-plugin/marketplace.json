@@ -1,6 +1,6 @@
 {
   "name": "hungrytech-plugins",
-  "description": "12 Claude Code expert plugins for a complete software engineering team",
+  "description": "13 Claude Code expert plugins for a complete software engineering team",
   "owner": {
     "name": "hungrytech"
   },
@@ -64,6 +64,11 @@
       "name": "sub-frontend-engineer",
       "description": "React/Vite frontend workflow agent with component design, state management, and build optimization",
       "source": "./plugins/sub-frontend-engineer"
+    },
+    {
+      "name": "sub-codebase-explorer",
+      "description": "Multi-language codebase analysis agent with dependency graphs, MSA topology mapping, and auto-generated ARCHITECTURE/ONBOARDING docs",
+      "source": "./plugins/sub-codebase-explorer"
     }
   ]
 }
